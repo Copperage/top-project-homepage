@@ -1,0 +1,10 @@
+img {
+	max-width: 500px;
+}
+
+button {
+	width: 50px;
+	border-radius: 25px;
+	border: 0;
+	box-shadow: none;
+}
