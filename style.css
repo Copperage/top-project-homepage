@@ -1,10 +1,93 @@
-img {
-	max-width: 500px;
+@import url(./fonts.css);
+
+*,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+@media only screen and (min-width: 900) {
+	:root {
+		font-size: 18px;
+	}
+}
+:root {
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Layout */
+
+header,
+section,
+footer {
+	width: 100%;
+	justify-content: center;
+}
+
+/* Header */
+header {
+	display: flex;
+}
+
+.header-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-wrapper::before {
+	background-color: rgb(160, 25, 25);
+}
+
+.image-wrapper {
+	position: relative;
+	width: fit-content;
+	margin: 5%;
+}
+
+.image-wrapper img {
+	max-width: 100%;
+	max-height: 500px;
+}
+
+.image-wrapper h1 {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 0%);
+	width: max-content;
+	color: white;
+	font-size: 2.8em;
+	font-family: 'Playfair-Display', sans-serif;
+	font-weight: 500;
+}
+
+/* Cards Section */
+section {
+	display: flex;
+	height: 500px;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	bottom: 0;
+}
+
+/* Content */
+
 button {
-	width: 50px;
+	width: 40px;
 	border-radius: 25px;
 	border: 0;
 	box-shadow: none;
+	padding: 0;
+	background-color: transparent;
+	margin-right: 5px;
+}
+
+button:hover {
+	scale: 1.1;
 }
