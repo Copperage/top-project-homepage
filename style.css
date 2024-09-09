@@ -18,6 +18,7 @@ html {
 	--main-font-color: rgb(75, 75, 75);
 	--header-font-family: 'Playfair-Display', sans-serif;
 	--shadow-color: rgba(0, 0, 0, 0.3);
+	--bg-highlight-color: rgb(160, 25, 25);
 }
 
 /* Layout */
@@ -50,7 +51,7 @@ header {
 }
 
 .style-wrapper {
-	background-color: rgb(160, 25, 25);
+	background-color: var(--bg-highlight-color);
 	position: absolute;
 	width: 1000px;
 	height: 1000px;
@@ -120,7 +121,7 @@ section {
 .card-wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
+	gap: 3em;
 	align-items: center;
 }
 
@@ -188,4 +189,53 @@ section {
 footer {
 	display: flex;
 	bottom: 0;
+	background-color: var(--bg-highlight-color);
+	color: #fff;
+	margin-top: 7em;
+}
+
+.footer-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin-bottom: 0.5em;
+	font-size: 1.1em;
+}
+
+.contact-wrapper h1 {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.contact-wrapper > *:nth-child(3),
+.contact-wrapper > *:nth-child(4),
+.contact-wrapper > *:nth-child(5) {
+	font-size: 0.75em;
+}
+
+.contact-wrapper > *:nth-child(3),
+.contact-wrapper > *:nth-child(4) {
+	margin: 1.5em 0;
+	margin-bottom: 0.5em;
+}
+
+.contact-wrapper > .social-buttons {
+	justify-content: center;
+	margin: 2em 0;
+}
+
+.contact-wrapper > .social-buttons > button {
+	width: 50px;
+}
+
+.footer-img {
+	object-fit: cover;
+	object-position: -325px;
+	width: 100%;
+	height: 600px;
 }
