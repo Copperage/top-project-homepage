@@ -7,11 +7,6 @@ html {
 	box-sizing: border-box;
 }
 
-@media only screen and (min-width: 900) {
-	:root {
-		font-size: 18px;
-	}
-}
 :root {
 	font-size: 24px;
 	font-family: 'Roboto', sans-serif;
@@ -20,6 +15,8 @@ html {
 	--shadow-color: rgba(0, 0, 0, 0.3);
 	--bg-highlight-color: rgb(160, 25, 25);
 }
+
+/* Mobile Screens */
 
 /* Layout */
 
@@ -53,12 +50,13 @@ header {
 .style-wrapper {
 	background-color: var(--bg-highlight-color);
 	position: absolute;
-	width: 1000px;
+	width: 1500px;
 	height: 1000px;
 	top: -580px;
 	left: -500px;
-	transform: rotate(-25deg);
+	transform: rotate(-15deg);
 	box-shadow: 0 0 15px 0 var(--shadow-color);
+	z-index: -1;
 }
 
 .image-wrapper {
@@ -75,14 +73,15 @@ header {
 	box-shadow: 0 0 15px 0 var(--shadow-color);
 }
 
-.image-wrapper h1 {
+/* Image text */
+.header-wrapper > *:nth-child(2) {
 	position: absolute;
-	left: 50%;
-	bottom: 0;
-	transform: translate(-50%, 0);
+	right: 50%;
+	top: 49%;
+	transform: translate(50%, -50%);
 	color: #fff;
 	text-shadow: 3px -2px 5px #000;
-	font-size: 15vw;
+	font-size: 2.5em;
 }
 
 .header-wrapper p {
@@ -238,4 +237,57 @@ footer {
 	object-position: -325px;
 	width: 100%;
 	height: 600px;
+}
+
+/* Tablet Screens */
+
+@media only screen and (min-width: 750px) {
+	:root {
+		font-size: 18px;
+	}
+
+	/* Header */
+
+	.header-wrapper {
+		display: block;
+		margin: 17% 10%;
+		background-color: #fff;
+		padding: 1rem;
+		box-shadow: 0 0 15px 0 var(--shadow-color);
+	}
+
+	.image-wrapper {
+		float: left;
+		margin: -18% 0 0 -10%;
+		padding-right: 1rem;
+	}
+
+	.image-wrapper img {
+		width: 400px;
+		height: 400px;
+	}
+
+	.header-wrapper > *:nth-child(2) {
+		position: absolute;
+		right: 6vw;
+		top: 6vw;
+		width: 500px;
+		text-shadow: 1px 3px 5px #000;
+		font-size: 3em;
+		transform: translate(0, 0);
+	}
+
+	.header-wrapper > *:nth-child(3) {
+		margin: 3rem 0 1rem;
+		text-align: center;
+	}
+
+	.header-wrapper p {
+		padding: 0.5rem;
+		margin: 0;
+	}
+
+	.social-buttons {
+		visibility: hidden;
+	}
 }
