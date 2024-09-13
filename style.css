@@ -217,16 +217,31 @@ footer {
 	margin-bottom: 0.5em;
 }
 
-.contact-wrapper > *:nth-child(3),
-.contact-wrapper > *:nth-child(4),
-.contact-wrapper > *:nth-child(5) {
-	font-size: 0.75em;
+.contact-wrapper > *:nth-child(2) {
+	margin-bottom: 1.5em;
 }
 
 .contact-wrapper > *:nth-child(3),
-.contact-wrapper > *:nth-child(4) {
-	margin: 1.5em 0;
-	margin-bottom: 0.5em;
+.phone-num,
+.email {
+	font-size: 0.75em;
+}
+
+.phone-num,
+.email {
+	margin: 1.5em 0 -1em 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.phone-num img,
+.email img {
+	display: flex;
+	width: 0px;
+	filter: invert();
+	visibility: hidden;
+	margin-left: -0.5em;
 }
 
 .contact-wrapper > .social-buttons {
@@ -293,14 +308,14 @@ footer {
 		margin: 0;
 	}
 
-	.social-buttons {
+	header .social-buttons {
 		visibility: hidden;
 	}
 
 	/* Card Section */
 
 	section {
-		margin: 6vh auto;
+		margin: 6vh auto 20vh auto;
 		flex-direction: column;
 		width: 85vw;
 		align-items: flex-start;
@@ -314,5 +329,54 @@ footer {
 
 	.card {
 		max-width: 40vw;
+	}
+
+	/* Footer */
+
+	.footer-wrapper {
+		flex-direction: row;
+	}
+
+	.contact-wrapper {
+		padding: 0;
+		margin: 5em 3em 3em 3em;
+		font-size: 1.1em;
+	}
+
+	.contact-wrapper h1 {
+		text-align: left;
+		font-size: 2em;
+	}
+
+	.contact-wrapper > *:nth-child(2) {
+		margin-bottom: 1.5em;
+	}
+
+	.contact-wrapper > *:nth-child(3),
+	.phone-num,
+	.email {
+		font-size: 1em;
+	}
+
+	.footer-img {
+		padding: 2em 2em 3em 0;
+		object-position: -280px;
+		width: 75%;
+		height: 100%;
+	}
+
+	.phone-num img,
+	.email img {
+		width: 30px;
+		visibility: visible;
+		margin-left: 0;
+	}
+
+	.contact-wrapper > .social-buttons {
+		justify-content: flex-start;
+	}
+
+	.contact-wrapper > .social-buttons button {
+		width: 40px;
 	}
 }
