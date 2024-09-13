@@ -113,8 +113,14 @@ button:hover {
 /* Cards Section */
 
 section {
-	margin: 13vh 0;
+	margin: 13vh auto;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section h1 {
+	margin-bottom: 0.5em;
 }
 
 .card-wrapper {
@@ -128,7 +134,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	width: 90vw;
+	max-width: 90vw;
 	height: fit-content;
 }
 
@@ -250,7 +256,7 @@ footer {
 
 	.header-wrapper {
 		display: block;
-		margin: 17% 10%;
+		margin: 17% 10% 0 10%;
 		background-color: #fff;
 		padding: 1rem;
 		box-shadow: 0 0 15px 0 var(--shadow-color);
@@ -270,7 +276,7 @@ footer {
 	.header-wrapper > *:nth-child(2) {
 		position: absolute;
 		right: 6vw;
-		top: 6vw;
+		top: 7vw;
 		width: 500px;
 		text-shadow: 1px 3px 5px #000;
 		font-size: 3em;
@@ -289,5 +295,24 @@ footer {
 
 	.social-buttons {
 		visibility: hidden;
+	}
+
+	/* Card Section */
+
+	section {
+		margin: 6vh auto;
+		flex-direction: column;
+		width: 85vw;
+		align-items: flex-start;
+	}
+
+	.card-wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 3em 2em;
+	}
+
+	.card {
+		max-width: 40vw;
 	}
 }
