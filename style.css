@@ -258,7 +258,7 @@ footer {
 }
 
 .contact-wrapper > .social-buttons > button {
-	width: 50px;
+	width: 4em;
 }
 
 .footer-img {
@@ -374,7 +374,7 @@ footer {
 
 	.phone-num img,
 	.email img {
-		width: 30px;
+		width: 1.5em;
 		visibility: visible;
 		margin-left: 0;
 	}
@@ -384,7 +384,7 @@ footer {
 	}
 
 	.contact-wrapper > .social-buttons button {
-		width: 40px;
+		width: 3em;
 	}
 }
 
@@ -472,5 +472,35 @@ footer {
 	.desc-wrapper button {
 		width: 2.5em;
 		margin-left: 2em;
+	}
+
+	/* Footer */
+
+	.contact-wrapper {
+		margin: 3em 0 0 4em;
+		font-size: 1em;
+	}
+
+	.footer-img {
+		padding: 3em 5em;
+		object-position: 0;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.phone-num img,
+	.email img {
+		width: 1.5em;
+		visibility: visible;
+		margin-left: 0;
+	}
+
+	.contact-wrapper > .social-buttons {
+		justify-content: flex-start;
+	}
+
+	.contact-wrapper > .social-buttons button {
+		margin-top: 1.5em;
+		width: 5em;
 	}
 }
